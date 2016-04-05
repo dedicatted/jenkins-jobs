@@ -1,0 +1,6 @@
+- job:
+    name: test-job1
+    project-type: freestyle
+    description: 'test job 1'
+    builders:
+    - shell: "uptime"

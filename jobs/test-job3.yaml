@@ -1,0 +1,6 @@
+- job:
+    name: test-job3
+    project-type: freestyle
+    description: 'test job 3  '
+    builders:
+    - shell: "pwd"

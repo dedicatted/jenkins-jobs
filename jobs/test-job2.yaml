@@ -1,0 +1,6 @@
+- job:
+    name: test-job2
+    project-type: freestyle
+    description: 'test job 2 '
+    builders:
+    - shell: "uname -a"
