@@ -1,0 +1,20 @@
+- job:
+    name: test-job-sparse-checkout
+    project-type: freestyle
+    description: 'test job with sparse checkout'
+
+    scm:
+      - git:
+          url: https://github.com/dedicatted/kafka-repo.git
+          branches:
+            - master
+          sparse-checkout: { 'paths': ['cookbooks/zookeeper_node'] }
+          skip-tag: true
+          wipe-workspace: false
+
+    triggers:
+      - pollscm:
+          cron: ""
+
+    builders:
+      - shell: "uptime"
