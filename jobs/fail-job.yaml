@@ -1,0 +1,6 @@
+- job:
+    name: fail-job
+    project-type: freestyle
+    description: 'fail job'
+    builders:
+    - shell: "dfjghkdjfh"
