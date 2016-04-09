@@ -1,0 +1,10 @@
+- job:
+    name: test-buildflow
+    project-type: flow
+    description: 'test build flow'
+    dsl: |
+      build( "test-job-sparse-checkout" )
+      build( "test-job1" )
+      build( "fail-job" )
+      build( "test-job2" )
+      build( "test-job3" )
